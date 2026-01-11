@@ -4,7 +4,7 @@ import { ArrowUpRight, GitBranch } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="mt-24">
+    <footer className="mt-auto">
       <Separator className={"footer-border"} />
       <div
         className={

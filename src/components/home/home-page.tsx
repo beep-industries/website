@@ -7,11 +7,13 @@ import { Footer } from "@/components/home/footer/footer"
 
 export function HomePage() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div className="relative flex min-h-screen flex-col overflow-hidden">
       <HomePageBackground />
       <Header />
-      <HeroSection />
-      <Features />
+      <main className="flex-grow">
+        <HeroSection />
+        <Features />
+      </main>
       <Footer />
     </div>
   )
