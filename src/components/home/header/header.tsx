@@ -10,7 +10,14 @@ export default function Header() {
       <div className="relative mx-auto flex max-w-7xl items-center justify-between px-[32px] py-[18px]">
         <div className="flex flex-1 items-center justify-start">
           <Link className="flex items-center" href={"/"}>
-            <Image className="block w-auto" src="/logo.svg" width={131} height={28} alt="Beep" />
+            <Image
+              className="block"
+              src="/logo.svg"
+              width={131}
+              height={28}
+              alt="Beep"
+              priority
+            />
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-end">
