@@ -52,7 +52,7 @@ export const metadata: Metadata = {
       "A modern, open-source communication platform built with microservices architecture by 15 students. Real-time messaging, voice channels, and complete data ownership.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Beep - Open Source Communication Platform",
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     title: "Beep - Open Source Communication Platform",
     description:
       "A modern, open-source communication platform built with microservices architecture. Self-hosted and 100% transparent.",
-    images: ["/opengraph-image.png"],
+    images: ["/opengraph-image.jpg"],
   },
   alternates: {
     canonical: siteUrl,
