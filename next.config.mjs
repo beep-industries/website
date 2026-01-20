@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "standalone",
   images: {
-    domains: ["cdn.simpleicons.org", "localhost", "paddle-billing.vercel.app"],
+    domains: ["beep.ovh", "localhost"],
   },
 }
 
