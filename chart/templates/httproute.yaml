@@ -25,7 +25,7 @@ spec:
   rules:
     - matches:
         - path:
-            type: PathPrefix
+            type: Exact
             value: /
       backendRefs:
         - name: {{ include "beep-website.fullname" . }}
