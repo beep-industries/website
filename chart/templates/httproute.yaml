@@ -23,11 +23,13 @@ spec:
     {{- end }}
   {{- end }}
   rules:
+    {{- range .Values.httpRoute.rules }}
     - matches:
         - path:
-            type: Exact
-            value: /
+            type: {{ .path.type }}
+            value: {{ .path.value }}
       backendRefs:
-        - name: {{ include "beep-website.fullname" . }}
-          port: {{ .Values.service.port }}
+        - name: {{ include "beep-website.fullname" $ }}
+          port: {{ $.Values.service.port }}
+    {{- end }}
 {{- end }}
