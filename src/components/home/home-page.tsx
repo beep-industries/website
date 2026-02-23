@@ -4,6 +4,8 @@ import { HeroSection } from "@/components/home/hero-section/hero-section"
 import { Features } from "@/components/home/features/features"
 import { HomePageBackground } from "@/components/gradients/home-page-background"
 import { Footer } from "@/components/home/footer/footer"
+import { DocumentationSection } from "./documentation/documentation-section"
+import { CollaborationSection } from "./collaborate/collaborate-section"
 
 export function HomePage() {
   return (
@@ -13,6 +15,8 @@ export function HomePage() {
       <main className="flex-grow">
         <HeroSection />
         <Features />
+        <DocumentationSection />
+        <CollaborationSection />
       </main>
       <Footer />
     </div>
