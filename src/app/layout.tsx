@@ -4,6 +4,7 @@ import "../styles/layout.css"
 import { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
 import Header from "@/components/home/header/header"
+import { Footer } from "@/components/home/footer/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -97,6 +98,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

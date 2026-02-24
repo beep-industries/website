@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Separator } from "@/components/ui/separator"
-import { ArrowUpRight, GitBranch } from "lucide-react"
+import { ArrowUpRight, GitBranch, Linkedin } from "lucide-react"
 
 export function Footer() {
   return (
@@ -24,6 +24,17 @@ export function Footer() {
             <span className={"flex items-center gap-1"}>
               <GitBranch className={"h-4 w-4"} />
               GitHub
+              <ArrowUpRight className={"h-4 w-4"} />
+            </span>
+          </Link>
+          <Link
+            className={"hover:text-foreground text-sm leading-[14px] transition-colors"}
+            href={"https://www.linkedin.com/company/beep-industries/"}
+            target={"_blank"}
+          >
+            <span className={"flex items-center gap-1"}>
+              <Linkedin className={"h-4 w-4"} />
+              LinkedIn
               <ArrowUpRight className={"h-4 w-4"} />
             </span>
           </Link>

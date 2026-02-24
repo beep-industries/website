@@ -2,7 +2,7 @@ import { HomePageBackground } from "@/components/gradients/home-page-background"
 import "../../styles/home-page.css"
 import { FeatureCard } from "@/components/home/features/feature-card"
 import { MessageSquare, Mic, Shield, Zap, GitBranch, Users } from "lucide-react"
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown from "react-markdown"
 
 const contributing = `# Contributing to Beep
 
@@ -221,7 +221,7 @@ export default function Collaboration() {
       }
     >
       <HomePageBackground />
-      <div className="w-full text-center flex flex-col items-center gap-12">
+      <div className="flex w-full flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center">
           <h1
             className={
@@ -238,9 +238,14 @@ export default function Collaboration() {
             How to contribute to Beep and get involved in the project.
           </p>
         </div>
-        <FeatureCard icon={MessageSquare} title={"CONTRIBUTING.md"} description="" className="w-fit">
-          <article className="prose prose-invert mt-4 text-left mx-12">
-           <ReactMarkdown>{contributing}</ReactMarkdown>
+        <FeatureCard
+          icon={MessageSquare}
+          title={"CONTRIBUTING.md"}
+          description=""
+          className="w-fit"
+        >
+          <article className="prose prose-invert mx-12 mt-4 text-left">
+            <ReactMarkdown>{contributing}</ReactMarkdown>
           </article>
         </FeatureCard>
       </div>
