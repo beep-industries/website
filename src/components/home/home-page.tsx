@@ -11,7 +11,6 @@ export function HomePage() {
   return (
     <div className="relative flex min-h-screen flex-col overflow-hidden">
       <HomePageBackground />
-      <Header />
       <main className="flex-grow">
         <HeroSection />
         <Features />

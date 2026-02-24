@@ -3,6 +3,7 @@ import "../styles/globals.css"
 import "../styles/layout.css"
 import { ReactNode } from "react"
 import type { Metadata, Viewport } from "next"
+import Header from "@/components/home/header/header"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -93,7 +94,10 @@ export default function RootLayout({
         <link rel="preload" href="/assets/background/grain-bg.svg" as="image" />
         <link rel="preload" href="/assets/background/small-blur.svg" as="image" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   )
 }
