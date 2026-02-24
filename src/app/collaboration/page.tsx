@@ -217,7 +217,7 @@ export default function Collaboration() {
   return (
     <section
       className={
-        "relative mx-auto mt-16 mb-12 flex max-w-7xl items-center justify-between px-[32px]"
+        "relative mx-auto mb-12 flex max-w-7xl items-center justify-between px-[32px] pt-10"
       }
     >
       <HomePageBackground />
