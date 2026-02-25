@@ -1,8 +1,9 @@
-import "../../styles/home-page.css"
+import "@/styles/home-page.css"
 import { HomePageBackground } from "@/components/gradients/home-page-background"
 import { FeatureCard } from "@/components/home/features/feature-card"
 import { MessageSquare } from "lucide-react"
 import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 const document = `# Beep
 
@@ -174,8 +175,8 @@ export default function Documentation() {
           description=""
           className="w-fit"
         >
-          <article className="prose prose-invert mx-12 mt-4 text-left">
-            <ReactMarkdown>{document}</ReactMarkdown>
+          <article className="prose prose-invert mx-12 mt-4 text-left [&_:not(pre)>code]:rounded [&_:not(pre)>code]:bg-white/10 [&_:not(pre)>code]:px-1.5 [&_:not(pre)>code]:py-0.5 [&_:not(pre)>code]:font-mono [&_:not(pre)>code]:text-sm [&_:not(pre)>code]:before:content-none [&_:not(pre)>code]:after:content-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{document}</ReactMarkdown>
           </article>
         </FeatureCard>
       </div>

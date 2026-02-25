@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -31,34 +32,35 @@ export default function Header() {
             </Button>
           </div>
           <div>
-            <X
-              className={cn(
-                "absolute h-6 w-6 rotate-90 cursor-pointer transition-all duration-300",
-                isOpen ? "rotate-90 opacity-100" : "rotate-0 opacity-0"
-              )}
-              onClick={() => setIsOpen(!isOpen)}
-            />
-            <Menu
-              className={cn("h-6 w-6 cursor-pointer", isOpen ? "opacity-0" : "opacity-100")}
-              onClick={() => setIsOpen(!isOpen)}
-            />
+            <DropdownMenu open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
+              <DropdownMenuTrigger asChild>
+                <Button asChild variant="ghost" className="hover:bg-transparent">
+                  <div>
+                    <X
+                      className={cn(
+                        "absolute h-6 w-6 rotate-90 cursor-pointer transition-all duration-300",
+                        isOpen ? "rotate-90 opacity-100" : "rotate-0 opacity-0"
+                      )}
+                      onClick={() => setIsOpen(!isOpen)}
+                    />
+                    <Menu
+                      className={cn("h-6 w-6 cursor-pointer", isOpen ? "opacity-0" : "opacity-100")}
+                      onClick={() => setIsOpen(!isOpen)}
+                    />
+                  </div>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                {navLinks.map((link) => (
+                  <DropdownMenuItem key={link.name}>
+                    <Link href={link.href} className="w-full">{link.name}</Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="border-border bg-background/50 absolute top-full right-0 z-50 flex flex-col gap-2 rounded border">
-          {navLinks.map((link) => (
-            <Link
-              className="block cursor-pointer px-4 py-2 underline-offset-4 hover:underline"
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
-      )}
     </nav>
   )
 }

@@ -1,8 +1,9 @@
 import { HomePageBackground } from "@/components/gradients/home-page-background"
-import "../../styles/home-page.css"
+import "@/styles/home-page.css"
 import { FeatureCard } from "@/components/home/features/feature-card"
 import { MessageSquare, Mic, Shield, Zap, GitBranch, Users } from "lucide-react"
 import ReactMarkdown from "react-markdown"
+import remarkGfm from 'remark-gfm'
 
 const contributing = `# Contributing to Beep
 
@@ -133,11 +134,11 @@ In the PR body, make sure to:
 
 **Before merging a PR:**
 
-- [ ]  Code is formatted and linted
-- [ ]  All tests pass
-- [ ]  Branch name follows the convention
-- [ ]  The issue is linked to the PR
-- [ ]  The PR has been reviewed by at least one team member
+- Code is formatted and linted
+- All tests pass
+- Branch name follows the convention
+- The issue is linked to the PR
+- The PR has been reviewed by at least one team member
 
 ### Naming conventions
 
@@ -244,8 +245,8 @@ export default function Collaboration() {
           description=""
           className="w-fit"
         >
-          <article className="prose prose-invert mx-12 mt-4 text-left">
-            <ReactMarkdown>{contributing}</ReactMarkdown>
+          <article className="prose prose-invert mx-12 mt-4 text-left [&_:not(pre)>code]:rounded [&_:not(pre)>code]:bg-white/10 [&_:not(pre)>code]:px-1.5 [&_:not(pre)>code]:py-0.5 [&_:not(pre)>code]:font-mono [&_:not(pre)>code]:text-sm [&_:not(pre)>code]:before:content-none [&_:not(pre)>code]:after:content-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{contributing}</ReactMarkdown>
           </article>
         </FeatureCard>
       </div>
