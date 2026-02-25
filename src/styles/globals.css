@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -45,7 +46,7 @@
   --secondary-foreground: hsl(0 0% 100%);
   --muted: hsl(217.2 32.6% 17.5%);
   --muted-foreground: hsl(180 1% 48%);
-  --accent: hsl(217.2 32.6% 17.5%);
+  --accent: hsl(217, 9%, 18%);
   --accent-foreground: hsl(210 40% 98%);
   --destructive: hsl(0 62.8% 30.6%);
   --destructive-foreground: hsl(210 40% 98%);
