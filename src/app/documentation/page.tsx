@@ -5,7 +5,7 @@ import { MessageSquare } from "lucide-react"
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 
-const document = `# Beep
+const documentation = `# Beep
 
 **Beep** is an open source communication platform designed as an alternative to current big real-time platforms.  
 It allows users to create servers, exchange messages, manage communities, and collaborate within a structured environment.
@@ -151,7 +151,6 @@ export default function Documentation() {
         "relative mx-auto mb-12 flex max-w-7xl items-center justify-between px-[32px] pt-10"
       }
     >
-      <HomePageBackground />
       <div className="flex w-full flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center">
           <h1
@@ -176,7 +175,7 @@ export default function Documentation() {
           className="w-fit"
         >
           <article className="prose prose-invert mx-12 mt-4 text-left [&_:not(pre)>code]:rounded [&_:not(pre)>code]:bg-white/10 [&_:not(pre)>code]:px-1.5 [&_:not(pre)>code]:py-0.5 [&_:not(pre)>code]:font-mono [&_:not(pre)>code]:text-sm [&_:not(pre)>code]:before:content-none [&_:not(pre)>code]:after:content-none">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{document}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>{documentation}</ReactMarkdown>
           </article>
         </FeatureCard>
       </div>

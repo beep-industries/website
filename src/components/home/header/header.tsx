@@ -34,7 +34,7 @@ export default function Header() {
           <div>
             <DropdownMenu open={isOpen} onOpenChange={(open) => setIsOpen(open)}>
               <DropdownMenuTrigger asChild>
-                <Button asChild variant="ghost" className="hover:bg-transparent">
+                <Button asChild variant="ghost" className="hover:bg-transparent w-[44px] p-0">
                   <div>
                     <X
                       className={cn(

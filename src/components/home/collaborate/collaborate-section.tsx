@@ -22,7 +22,7 @@ export function CollaborationSection() {
 
           <Link
             href="/collaboration"
-            className="inline-flex transform items-center justify-center gap-3 rounded-lg bg-gradient-to-r px-8 py-4 font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="inline-flex transform items-center justify-center gap-3 rounded-lg bg-[#fcfcfc33] text-white secondary-button-animation disabled:bg-[#191A1A] px-8 py-4 font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
           >
             Explore Collaboration
             <ArrowRight className="h-5 w-5" />

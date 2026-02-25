@@ -221,7 +221,6 @@ export default function Collaboration() {
         "relative mx-auto mb-12 flex max-w-7xl items-center justify-between px-[32px] pt-10"
       }
     >
-      <HomePageBackground />
       <div className="flex w-full flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center">
           <h1
