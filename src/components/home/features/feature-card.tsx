@@ -1,11 +1,12 @@
 import { cn } from "@/lib/utils"
 import { LucideIcon } from "lucide-react"
+import { ReactNode } from "react"
 
 interface Props {
   icon: LucideIcon
   title: string
   description: string
-  children?: React.ReactNode
+  children?: ReactNode
   className?: string
 }
 

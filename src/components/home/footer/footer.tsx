@@ -20,6 +20,7 @@ export function Footer() {
             className={"hover:text-foreground text-sm leading-[14px] transition-colors"}
             href={"https://github.com/beep-industries"}
             target={"_blank"}
+            rel="noopener noreferrer"
           >
             <span className={"flex items-center gap-1"}>
               <GitBranch className={"h-4 w-4"} />
@@ -31,6 +32,7 @@ export function Footer() {
             className={"hover:text-foreground text-sm leading-[14px] transition-colors"}
             href={"https://www.linkedin.com/company/beep-industries/"}
             target={"_blank"}
+            rel="noopener noreferrer"
           >
             <span className={"flex items-center gap-1"}>
               <Linkedin className={"h-4 w-4"} />
